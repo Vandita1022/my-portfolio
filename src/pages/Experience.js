@@ -1,10 +1,12 @@
 import React from 'react';
 import PageWrapper from '../components/PageWrapper';
+import NeonLogo from '../components/NeonLogo';
 
 const Experience = () => {
   return (
     <PageWrapper>
         <div className="text-white p-8">
+          <NeonLogo text="Experiences" />
         <h1 className="text-3xl font-bold mb-4">Contact</h1>
         <form className="max-w-md space-y-4">
             <input

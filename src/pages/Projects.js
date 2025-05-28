@@ -1,22 +1,82 @@
-import React from 'react';
-import PageWrapper from '../components/PageWrapper';
+import React from "react";
+import PageWrapper from "../components/PageWrapper";
+import { v4 as uuidv4 } from "uuid";
+import Card from "../components/Card";
+import Carousel from "../components/Carousel";
+import NeonLogo from '../components/NeonLogo';
 
 const Projects = () => {
+  const cards = [
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/convertplus_thumbnail.jpg"
+          title="ConvertPlus Plugin"
+          description="Powerful popup plugin for converting visitors into subscribers and customers."
+          buttons={["Demo", "Code"]}
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/acf_pro.png"
+          title="ACF Pro"
+          description="Add custom fields to WordPress edit screens with this advanced plugin."
+          buttons={["Code"]}
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/layer_slider_plugin_thumb.png"
+          title="LayerSlider"
+          description="Multi-purpose animation platform for sliders and web effects."
+          buttons={["Demo"]}
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen="https://updates.theme-fusion.com/wp-content/uploads/2016/08/slider_revolution-1.png"
+          title="Slider Revolution"
+          description="Create beautiful sliders and carousels with advanced effects."
+          buttons={["Demo", "Code"]}
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imagen="https://updates.theme-fusion.com/wp-content/uploads/2019/01/pwa_880_660.jpg"
+          title="Progressive Web App"
+          description="Enhance performance and offline experience with PWA integration."
+          buttons={["Code"]}
+        />
+      ),
+    },
+  ];
+
   return (
     <PageWrapper>
-        <div className="text-white p-8">
-        <h1 className="text-3xl font-bold mb-4">Projects</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-800 p-4 rounded-lg shadow">
-            <h2 className="text-xl font-semibold">Sketch Classifier</h2>
-            <p className="text-sm mt-2">A computer vision model that classifies hand-drawn sketches using machine learning techniques.</p>
-            </div>
-            <div className="bg-gray-800 p-4 rounded-lg shadow">
-            <h2 className="text-xl font-semibold">Panache Shopping App</h2>
-            <p className="text-sm mt-2">Antique shopping app with user personas, storyboards, and wireframes.</p>
-            </div>
-        </div>
-        </div>
+      <div className="w-full md:w-1/2 mx-auto mt-12 mb-12">
+        <NeonLogo text="Projects" />
+        <Carousel
+          cards={cards}
+          height="500px"
+          width="100%"
+          margin="0 auto"
+          offset={2}
+          showArrows={false}
+        />
+      </div>
     </PageWrapper>
   );
 };

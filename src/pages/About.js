@@ -1,5 +1,6 @@
 import React from 'react';
 import PageWrapper from '../components/PageWrapper';
+import Timeline from '../components/Timeline';
 
 const About = () => {
   return (
@@ -10,6 +11,7 @@ const About = () => {
             I'm a software developer passionate about building intuitive UIs,
             solving real-world problems with code, and exploring new technologies.
         </p>
+        <Timeline />
         </div>
     </PageWrapper>
   );

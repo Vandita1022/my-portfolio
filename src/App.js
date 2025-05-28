@@ -6,6 +6,7 @@ import StarryBackground from './components/StarryBackground';
 import RightSidePanel from './components/RightSidePanel';
 import LeftSidePanel from './components/LeftSidePanel';
 import ResumeButton from './components/ResumeButton';
+import CursorGlow from './components/CursorGlow';
 
 import Home from './pages/Home';
 import Skills from './pages/Skills';
@@ -23,6 +24,7 @@ const AppWrapper = () => {
       <RightSidePanel />
       <LeftSidePanel />
       <ResumeButton />
+      <CursorGlow />
       <div className="relative z-10">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>

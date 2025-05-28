@@ -6,7 +6,7 @@ import icon2 from '../images/skills.png';
 import icon3 from '../images/projects.png';
 import icon4 from '../images/experience.png';
 import icon5 from '../images/about_me.png';
-import icon6 from '../images/linkedin.png';
+// import icon6 from '../images/linkedin.png';
 
 const buttons = [
   { icon: icon1, path: '/', label: 'Home' },
@@ -14,7 +14,7 @@ const buttons = [
   { icon: icon3, path: '/projects', label: 'Projects' },
   { icon: icon4, path: '/experience', label: 'Experience' },
   { icon: icon5, path: '/about', label: 'About Me' },
-  { icon: icon6, path: '/extra', label: 'LinkedIn' }, // optional
+  // { icon: icon6, path: '/extra', label: 'LinkedIn' }, // optional
 ];
 
 const RightSidePanel = () => {
