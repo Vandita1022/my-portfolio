@@ -25,7 +25,7 @@ const PhotoCarousel = ({ photos }) => {
   return (
     <div className="relative rounded-xl overflow-hidden group">
       {/* Main Image */}
-      <div className="relative aspect-video bg-muted">
+      <div className="relative bg-muted">
         <img 
           src={photos[currentIndex]} 
           alt={`Memory ${currentIndex + 1}`}

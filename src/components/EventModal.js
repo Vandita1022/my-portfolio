@@ -1,5 +1,5 @@
 import { X, Calendar, Heart } from 'lucide-react';
-import PhotoCarousel from './PhotoCarousel';
+import PhotoCarousel from './PhotoCarousel.js';
 
 const EventModal = ({ event, onClose }) => {
   return (
@@ -11,23 +11,23 @@ const EventModal = ({ event, onClose }) => {
       ></div>
 
       {/* Modal Content */}
-      <div className="relative max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="card-romantic animate-scale-in">
+      <div className="relative max-w-sm w-full max-h-[90vh] overflow-y-auto">
+        <div className="card-romantic animate-scale-in p-4">
           {/* Header */}
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center gap-3">
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2">
               <div className={`${event.isSpecial ? 'timeline-dot-special' : 'timeline-dot'}`}>
                 {event.isSpecial && (
                   <Heart className="w-3 h-3 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                 )}
               </div>
               <div>
-                <h2 className="text-2xl font-romantic text-gradient-romantic">
+                <h2 className="text-lg font-romantic text-gradient-romantic">
                   {event.title}
                 </h2>
-                <div className="flex items-center gap-2 mt-1">
-                  <Calendar className="w-4 h-4 text-rose-gold" />
-                  <span className="text-sm font-elegant text-muted-foreground">
+                <div className="flex items-center gap-1 mt-1">
+                  <Calendar className="w-3 h-3 text-rose-gold" />
+                  <span className="text-xs font-elegant text-muted-foreground">
                     {event.date}
                   </span>
                 </div>
@@ -36,7 +36,7 @@ const EventModal = ({ event, onClose }) => {
             
             <button
               onClick={onClose}
-              className="w-8 h-8 rounded-full bg-muted hover:bg-rose-gold hover:text-white transition-all duration-300 flex items-center justify-center"
+              className="w-7 h-7 rounded-full bg-muted hover:bg-rose-gold hover:text-white transition-all duration-300 flex items-center justify-center"
             >
               <X className="w-4 h-4" />
             </button>
@@ -44,38 +44,38 @@ const EventModal = ({ event, onClose }) => {
 
           {/* Photo Carousel */}
           {event.photos.length > 0 && (
-            <div className="mb-6">
+            <div className="mb-3">
               <PhotoCarousel photos={event.photos} />
             </div>
           )}
 
           {/* Handwritten Message */}
-          <div className="bg-warm-white rounded-xl p-6 border-l-4 border-rose-gold relative">
-            <div className="absolute -top-2 -left-2 w-4 h-4 bg-rose-gold rounded-full"></div>
-            <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-blush-deep rounded-full"></div>
+          <div className="bg-warm-white rounded-lg p-4 border-l-4 border-rose-gold relative">
+            <div className="absolute -top-1 -left-1 w-3 h-3 bg-rose-gold rounded-full"></div>
+            <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-blush-deep rounded-full"></div>
             
-            <div className="mb-4">
-              <Heart className="w-5 h-5 text-rose-gold inline mr-2" />
-              <span className="font-romantic text-lg text-rose-gold">My dearest love,</span>
+            <div className="mb-2">
+              <Heart className="w-4 h-4 text-rose-gold inline mr-2" />
+              <span className="font-romantic text-sm text-rose-gold">My dearest love,</span>
             </div>
             
-            <p className="font-elegant text-foreground leading-relaxed text-lg italic mb-4">
+            <p className="font-elegant text-sm text-foreground leading-relaxed italic mb-2">
               {event.message}
             </p>
             
             <div className="text-right">
-              <span className="font-romantic text-rose-gold text-lg">
+              <span className="font-romantic text-sm text-rose-gold">
                 Forever yours ❤️
               </span>
             </div>
           </div>
 
           {/* Floating Hearts */}
-          <div className="absolute -top-4 -right-4 text-rose-gold opacity-50">
-            <Heart className="w-6 h-6 animate-heart-pulse floating-heart" />
+          <div className="absolute -top-3 -right-3 text-rose-gold opacity-50">
+            <Heart className="w-5 h-5 animate-heart-pulse floating-heart" />
           </div>
-          <div className="absolute -bottom-2 -left-2 text-lavender opacity-40">
-            <Heart className="w-4 h-4 animate-heart-pulse floating-heart" style={{ animationDelay: '1s' }} />
+          <div className="absolute -bottom-1 -left-1 text-lavender opacity-40">
+            <Heart className="w-3 h-3 animate-heart-pulse floating-heart" style={{ animationDelay: '1s' }} />
           </div>
         </div>
       </div>

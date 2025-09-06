@@ -50,7 +50,7 @@ const TimelineEvent = ({ event, index, onEventClick }) => {
                 <img 
                   src={photo} 
                   alt={`Memory ${photoIndex + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             ))}
